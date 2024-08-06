@@ -1,87 +1,88 @@
-/* your code here */
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 footer {
-    background-color: #f4f4f4;
-    padding: 20px;
-    color: #333;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
+.section {
+  flex: 1;
+  margin: 10px;
 }
 
-.footer-section h3 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+.section a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
+.section a:hover {
+  text-decoration: underline;
 }
 
-.footer-section ul li {
-    margin-bottom: 5px;
-}
-
-.footer-section a {
-    color: #333;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.social-media-link {
+  display: block;
+  margin: 10px 0;
+  color: #fff;
 }
 
 .media-icons {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    line-height: 24px;
-    border-radius: 50%;
-    text-decoration: none;
+  display: flex;
+  gap: 10px;
 }
 
-.media-icons:hover {
-    background-color: #555;
+.media-icon {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  display: block;
+  background-color: #fff; /* Placeholder color */
 }
 
-.facebook::before { content: 'F'; }
-.twitter::before { content: 'T'; }
-.instagram::before { content: 'I'; }
-.linkedin::before { content: 'L'; }
-.youtube::before { content: 'Y'; }
+#facebook {
+  background-image: url('path/to/facebook-icon.png');
+}
+
+#twitter {
+  background-image: url('path/to/twitter-icon.png');
+}
+
+#instagram {
+  background-image: url('path/to/instagram-icon.png');
+}
+
+#linkedin {
+  background-image: url('path/to/linkedin-icon.png');
+}
+
+#youtube {
+  background-image: url('path/to/youtube-icon.png');
+}
 
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
-}
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .section {
+    text-align: center;
+  }
+}
