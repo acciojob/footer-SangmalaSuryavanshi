@@ -1,48 +1,56 @@
-/* styles.css */
+/* Basic reset and font settings */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
     background-color: #333;
     color: #fff;
+    padding: 20px;
 }
 
-.footer-section {
-    margin: 10px;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
     flex: 1;
-    min-width: 200px;
+    min-width: 150px;
+    margin: 10px;
 }
 
-.footer-section h2 {
+.section h4 {
     margin-top: 0;
     font-size: 1.2em;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
+.section a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
     margin: 5px 0;
 }
 
-.footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
+.section a:hover {
     text-decoration: underline;
 }
 
-.social-media {
+#contact p {
+    margin: 0;
+}
+
+.social-media-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.media-icons {
     display: flex;
     gap: 10px;
 }
@@ -51,23 +59,32 @@ footer {
     display: block;
     width: 24px;
     height: 24px;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
 }
 
-.media-icon.facebook {
-    background-image: url('path-to-facebook-icon.png');
+#facebook {
+    background-image: url('facebook-icon.png'); /* Replace with your icon path */
 }
 
-.media-icon.twitter {
-    background-image: url('path-to-twitter-icon.png');
+#twitter {
+    background-image: url('twitter-icon.png'); /* Replace with your icon path */
 }
 
-.media-icon.instagram {
-    background-image: url('path-to-instagram-icon.png');
+#instagram {
+    background-image: url('instagram-icon.png'); /* Replace with your icon path */
+}
+
+#linkedin {
+    background-image: url('linkedin-icon.png'); /* Replace with your icon path */
+}
+
+#youtube {
+    background-image: url('youtube-icon.png'); /* Replace with your icon path */
 }
 
 @media (max-width: 768px) {
-    footer {
+    .footer-container {
         flex-direction: column;
         align-items: center;
     }
